@@ -1,22 +1,7 @@
 import React from 'react'
-import styled from 'styled-components/native'
+import { NavigationBar, Title } from '@shoutem/ui'
 
-
-const HeaderContainer = styled.View`
-  display: flex;
-  margin-top: 55px;
-  align-items: center;
-`
-
-const Title = styled.Text`
-  font-weight: bold;
-  font-size: 20;
-`
-
-const Header = () => (  
-  <HeaderContainer>
-    <Title>Cryptocurrency Tracker</Title>
-  </HeaderContainer>
-)
+const Header = () =>
+  <NavigationBar centerComponent={<Title>Crypto Tracker</Title>} />
 
 export default Header

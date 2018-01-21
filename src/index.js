@@ -2,10 +2,8 @@ import React from 'react'
 import Stack from './router'
 
 export default class App extends React.Component {
-  render() {
+  render () {
     return (
       <Stack />
     )
-  }
-}
-
+  }}
