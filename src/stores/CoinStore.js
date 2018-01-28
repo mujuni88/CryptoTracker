@@ -46,9 +46,7 @@ export default class CoinStore {
     try {
       const { data } = await xhr.get(`/v1/ticker/?limit=${this.limit}`)
       runInAction(() => {
-        console.log('FETCH COINS')
         this.coins.replace(data)
-        console.log(this.coins)
       })
     } catch (e) {
       this.setIsError(e)

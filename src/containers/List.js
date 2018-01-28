@@ -49,11 +49,16 @@ export default class List extends Component {
     return (
       <Tile small>
         <Row>
-          <Image
-            styleName='small-avatar'
-            source={{ uri: images[coin.symbol] }}
-          />
-          <Subtitle style={{ marginLeft: 1 }}>{coin.symbol}</Subtitle>
+          <View styleName='horizontal v-center space-between'>
+            <Subtitle>{coin.rank}</Subtitle>
+            <View styleName='vertical h-center' style={{width: 100}}>
+              <Image
+                styleName='small-avatar'
+                source={{ uri: images(coin.symbol)}}
+              />
+              <Subtitle styleName='sm-gutter-top'>{coin.symbol}</Subtitle>
+            </View>
+          </View>
           <View styleName='vertical h-end stretch space-between'>
             <Caption numberOfLines={1}>
               {currencyFormatter(coin.price_usd)}
